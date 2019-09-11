@@ -15,16 +15,13 @@ System.out.println(title);
 System.out.println("**********************************************");	 
 for(Element row: document.select("article.Box-row"))
  {
-       Elements links = row.select("a[href]");
-	   String link=links.attr("href");
-		
+		     
 	   String ripo_name=row.select("h1.h3.lh-condensed").text();
-	   String description=row.select("p.col-9.text-gray.my-1.pr-4").text();
-		 
+	   String description=row.select("p.col-9.text-gray.my-1.pr-4").text();			
 	   System.out.println("Ripo_name :"+ripo_name);
-       System.out.println("Description :"+description);
-       System.out.println("Link     :https://github.com/"+link);
-	   System.out.println("  ");
+           System.out.println("Description :"+description);
+           System.out.println("Link     :https://github.com/"+ripo_name);
+           System.out.println("  ");
 }
 		}
 		catch(Exception ex)
